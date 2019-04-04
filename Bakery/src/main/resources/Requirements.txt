@@ -1,0 +1,68 @@
+INSTRUCTIONS:
+-------------
+
+Please press CTRL + N and open BakeryTest.java
+
+Then read the following:
+
+Imagine that you have been hired to model/simulate the operations of a small Bakery.
+
+The last developer got fired because of a serious error in the program.
+You will need to find the error.
+Hint: Revew the below requirements for what a cashier is responsible and compare it to the implementation
+
+EMPLOYEES:
+----------
+The bakery has 3 employees - a baker, a cashier, and a store owner.
+Customers generally only interact with a cashier.
+
+
+INVENTORY:
+----------
+This particular bakery only sells cakes or muffins.
+The inventory is managed by the store owner.
+
+For example, if a baker bakes a muffin or cake, they must give it to the store owner. The store owner then goes and adds it to the inventory.
+If the cashier needs to know how many of a particular item is in stock, they must ask the store owner.
+If a cashier needs to provide a customer with a muffin or cake as part of a transaction, the store owner must remove the corresponding items from inventory.
+Neither the cashier nor the baker is allowed to directly access to the inventory of cakes and muffins.
+
+
+PRICES:
+-------
+All cakes are the same price.
+All muffins are the same price.
+All prices and dollar amounts are integers, not doubles. This is done to keep payments simple (and to avoid floating-point comparison issues)
+
+
+CASHIER RESPONSIBILITIES:
+-------------------------
+When a customer vists the store, a cashier usually greets the customer by name and provides them service.
+
+Let us better define what it means for a cashier to provide service:
+The cashier asks the customer if they are interested in buying either cakes or muffins.  The customer cannot choose to buy both in the same transaction.
+The cashier then asks the customer what quantity of the chosen item they wish to purchase.
+The cashier asks the store owner how many items are in the inventory.
+If the cashier determines that the bakery does not have enough of the item on hand, ask the baker to bake more items.
+After we've dealt with any potential inventory issues, we tell the customer the price they owe and collect payment.
+After the customer pays us, the cashier asks the store owner to place the money in the cash register.
+We then ask the store owner to get a muffin or cake from the inventory to give to the customer.
+After the cashier receives the muffins or cakes from the store owner, the customer can receive their order.
+
+
+MISC:
+-----
+We can assume that when our program starts, the cash register has no money in it.
+Neither the cashier nor the baker should access the cash register.
+The cashier can request that the store owner place money in the cash register.
+Also, as part of our model, customers have some amount of money in their wallet that we can directly manipulate (for testing/simulation purposes).
+
+
+SAMPLE OUTPUT OF CURRENT PROGRAM:
+---------------------------------
+
+Hello Bob, what can I get you?
+Press 1 for Cakes, 2 for Muffins or -1 to quit: 2
+How many Muffins would you like? [-1 to quit]: 1
+Hey Bob, you owe: 8
+Bob says: Thanks for baking me 1 muffin(s)
